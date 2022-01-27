@@ -1,0 +1,51 @@
+{
+    "author": "sms77 e.K.",
+    "description": "Send SMS via sms77",
+    "gateway_specific_settings": {
+        "webthings": {
+            "exec": "{nodeLoader} {path}",
+            "primary_type": "notifier",
+            "strict_max_version": "*",
+            "strict_min_version": "0.10.0"
+        }
+    },
+    "homepage_url": "https://github.com/sms77io/webthings#readme",
+    "id": "sms77",
+    "license": "MIT",
+    "manifest_version": 1,
+    "name": "sms77",
+    "options": {
+        "default": {
+            "apiKey": "",
+            "from": "",
+            "recipients": []
+        },
+        "schema": {
+            "properties": {
+                "apiKey": {
+                    "title": "The API key of the sms77 user",
+                    "type": "string"
+                },
+                "from": {
+                    "title": "An optional sender identifier",
+                    "type": "string"
+                },
+                "recipients": {
+                    "items": {
+                        "title": "A recipient",
+                        "type": "string"
+                    },
+                    "title": "A list of recipients",
+                    "type": "array"
+                }
+            },
+            "required": [
+                "apiKey",
+                "recipients"
+            ],
+            "type": "object"
+        }
+    },
+    "short_name": "sms77",
+    "version": "0.0.1"
+}
