@@ -1,0 +1,4 @@
+node_modules/
+dist/
+*.sha256sum
+*.tgz

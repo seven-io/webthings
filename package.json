@@ -1,0 +1,44 @@
+{
+    "author": "sms77 e.K. <support@sms77.io> (https://www.sms77.io)",
+    "bugs": {
+        "url": "https://github.com/sms77io/webthings/issues"
+    },
+    "dependencies": {
+        "node-fetch": "^2.6.7"
+    },
+    "description": "WebThings addon for sending SMS via sms77",
+    "devDependencies": {
+        "@types/node": "^14.18.9",
+        "@types/node-fetch": "^2.5.12",
+        "typescript": "^4.5.5",
+        "gateway-addon": "^2.0.0-alpha.1"
+    },
+    "files": [
+        "LICENSE",
+        "README.md",
+        "SHA256SUMS",
+        "dist/index.js",
+        "dist/Sms77Adapter.js",
+        "dist/Sms77Notifier.js",
+        "dist/Sms77Device.js",
+        "dist/Sms77Outlet.js",
+        "dist/util.js",
+        "manifest.json"
+    ],
+    "homepage": "https://github.com/sms77io/webthings#readme",
+    "keywords": [
+        "sms",
+        "webthings"
+    ],
+    "license": "MIT",
+    "main": "dist/index.js",
+    "name": "sms77-adapter",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sms77io/webthings.git"
+    },
+    "scripts": {
+        "build": "rm -rf dist && tsc"
+    },
+    "version": "0.0.1"
+}
