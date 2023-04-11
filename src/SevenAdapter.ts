@@ -1,14 +1,14 @@
 import {Adapter, AddonManagerProxy} from 'gateway-addon'
 import {getConfigAndDatabase} from './util'
-import {Sms77Device} from './Sms77Device'
+import {SevenDevice} from './SevenDevice'
 
-export class Sms77Adapter extends Adapter {
+export class SevenAdapter extends Adapter {
     constructor(
         private addonManager: AddonManagerProxy,
         private packageId: string,
         private errorCallback: (error: string) => void
     ) {
-        super(addonManager, 'Sms77Adapter', packageId)
+        super(addonManager, 'SevenAdapter', packageId)
         addonManager.addAdapter(this)
         this.init().then().catch(console.error)
     }
@@ -22,6 +22,6 @@ export class Sms77Adapter extends Adapter {
         if (!apiKey)
             this.errorCallback('Required setting apiKey is empty') // exit with gateway message
 
-        this.handleDeviceAdded(new Sms77Device(this, 'sms77'))
+        this.handleDeviceAdded(new SevenDevice(this, 'seven'))
     }
 }

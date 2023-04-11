@@ -21,7 +21,7 @@ export async function sms(cfg: Config, to: string, text: string): Promise<void> 
         method: 'POST',
     }
 
-    await fetch('https://gateway.sms77.io/api/sms', requestInit)
+    await fetch('https://gateway.seven.io/api/sms', requestInit)
 }
 
 export async function getConfigAndDatabase(id: string): Promise<[Config, Database]> {
@@ -30,7 +30,7 @@ export async function getConfigAndDatabase(id: string): Promise<[Config, Databas
     const cfg = <Config>await db.loadConfig()
 
     if (!cfg.apiKey) {
-        const apiKey = process.env.SMS77_API_KEY
+        const apiKey = process.env.SEVEN_API_KEY
         if (apiKey) {
             cfg.apiKey = apiKey
             await db.saveConfig(cfg)

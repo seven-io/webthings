@@ -1,12 +1,12 @@
 {
-    "author": "sms77 e.K. <support@sms77.io> (https://www.sms77.io)",
+    "author": "seven communications GmbH & Co. KG <support@seven.io> (https://www.seven.io)",
     "bugs": {
-        "url": "https://github.com/sms77io/webthings/issues"
+        "url": "https://github.com/seven-io/webthings/issues"
     },
     "dependencies": {
         "node-fetch": "^2.6.7"
     },
-    "description": "WebThings addon for sending SMS via sms77",
+    "description": "WebThings addon for sending SMS via seven",
     "devDependencies": {
         "@types/node": "^14.18.9",
         "@types/node-fetch": "^2.5.12",
@@ -18,27 +18,27 @@
         "README.md",
         "SHA256SUMS",
         "dist/index.js",
-        "dist/Sms77Adapter.js",
-        "dist/Sms77Notifier.js",
-        "dist/Sms77Device.js",
-        "dist/Sms77Outlet.js",
+        "dist/SevenAdapter.js",
+        "dist/SevenNotifier.js",
+        "dist/SevenDevice.js",
+        "dist/SevenOutlet.js",
         "dist/util.js",
         "manifest.json"
     ],
-    "homepage": "https://github.com/sms77io/webthings#readme",
+    "homepage": "https://github.com/seven-io/webthings#readme",
     "keywords": [
         "sms",
         "webthings"
     ],
     "license": "MIT",
     "main": "dist/index.js",
-    "name": "sms77-adapter",
+    "name": "@seven.io/webthings-adapter",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/sms77io/webthings.git"
+        "url": "git+https://github.com/seven-io/webthings.git"
     },
     "scripts": {
         "build": "rm -rf dist && tsc"
     },
-    "version": "0.0.1"
+    "version": "0.0.2"
 }

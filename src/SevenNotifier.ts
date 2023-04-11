@@ -1,10 +1,10 @@
 import {AddonManagerProxy, Notifier} from 'gateway-addon'
 import {arrayUnique, getConfigAndDatabase} from './util'
-import {Sms77Outlet} from './Sms77Outlet'
+import {SevenOutlet} from './SevenOutlet'
 
 const id = require('../manifest.json').id
 
-export class Sms77Notifier extends Notifier {
+export class SevenNotifier extends Notifier {
     constructor(addonManager: AddonManagerProxy) {
         super(addonManager, id, id)
 
@@ -17,7 +17,7 @@ export class Sms77Notifier extends Notifier {
         const [cfg, db] = await getConfigAndDatabase(this.getId())
 
         this.handleOutletAdded(
-            new Sms77Outlet(this, cfg, arrayUnique(cfg.recipients).join(',')))
+            new SevenOutlet(this, cfg, arrayUnique(cfg.recipients).join(',')))
 
         await db.saveConfig(cfg)
         db.close()

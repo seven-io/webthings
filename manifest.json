@@ -1,6 +1,6 @@
 {
-    "author": "sms77 e.K.",
-    "description": "Send SMS via sms77",
+    "author": "seven communications GmbH & Co. KG",
+    "description": "Send SMS via seven",
     "gateway_specific_settings": {
         "webthings": {
             "exec": "{nodeLoader} {path}",
@@ -9,11 +9,11 @@
             "strict_min_version": "0.10.0"
         }
     },
-    "homepage_url": "https://github.com/sms77io/webthings#readme",
-    "id": "sms77",
+    "homepage_url": "https://github.com/seven-io/webthings#readme",
+    "id": "seven",
     "license": "MIT",
     "manifest_version": 1,
-    "name": "sms77",
+    "name": "seven",
     "options": {
         "default": {
             "apiKey": "",
@@ -23,7 +23,7 @@
         "schema": {
             "properties": {
                 "apiKey": {
-                    "title": "The API key of the sms77 user",
+                    "title": "The API key of the seven user",
                     "type": "string"
                 },
                 "from": {
@@ -46,6 +46,6 @@
             "type": "object"
         }
     },
-    "short_name": "sms77",
-    "version": "0.0.1"
+    "short_name": "seven",
+    "version": "0.0.2"
 }
