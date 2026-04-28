@@ -7,6 +7,9 @@
         "node-fetch": "^3.3.2"
     },
     "description": "WebThings addon for sending SMS via seven",
+    "engines": {
+        "node": ">=20"
+    },
     "devDependencies": {
         "@types/node": "^25.6.0",
         "@types/node-fetch": "^2.5.12",
