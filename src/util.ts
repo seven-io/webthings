@@ -1,4 +1,3 @@
-import fetch, {RequestInit} from 'node-fetch'
 import {Database} from 'gateway-addon'
 import {Config} from './types'
 
@@ -7,7 +6,7 @@ export function arrayUnique(items: any[]) {
 }
 
 export async function sms(cfg: Config, to: string, text: string): Promise<void> {
-    const requestInit: RequestInit = {
+    await fetch('https://gateway.seven.io/api/sms', {
         body: JSON.stringify({
             from: cfg.from,
             text,
@@ -19,9 +18,7 @@ export async function sms(cfg: Config, to: string, text: string): Promise<void> 
             'X-Api-Key': cfg.apiKey,
         },
         method: 'POST',
-    }
-
-    await fetch('https://gateway.seven.io/api/sms', requestInit)
+    })
 }
 
 export async function getConfigAndDatabase(id: string): Promise<[Config, Database]> {
